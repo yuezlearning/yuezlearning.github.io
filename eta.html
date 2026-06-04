@@ -40,13 +40,15 @@
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-12 py-5 bg-white/90 backdrop-blur-md transition-shadow duration-300 max-md:px-5" role="navigation" aria-label="Main navigation">
     <a href="index.html" class="font-title font-bold text-lg no-underline text-dark">Yue</a>
     <div class="flex items-center gap-6">
-      <button class="nav-mobile-btn hidden p-2 border-none bg-transparent cursor-pointer text-dark" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <i data-lucide="menu" class="w-6 h-6"></i>
-      </button>
+      <!-- Theme toggle -->
       <button id="theme-toggle" class="w-9 h-9 rounded-full border border-border flex items-center justify-center text-dark transition-colors duration-200 hover:bg-dark hover:text-white" aria-label="Toggle dark mode">
         <i data-lucide="sun" class="w-[18px] h-[18px]"></i>
       </button>
-      <ul class="nav-links flex gap-8 list-none items-center" id="navLinks">
+      <!-- Hamburger button (mobile only) -->
+      <button class="nav-mobile-btn p-2 border-none bg-transparent cursor-pointer text-dark md:hidden" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+      <ul class="nav-links hidden md:flex gap-8 list-none items-center" id="navLinks">
         <li><a href="index.html#works" class="nav-link text-dark text-body-sm no-underline relative">Works</a></li>
         <li><a href="index.html#skills" class="nav-link text-dark text-body-sm no-underline relative">Skills</a></li>
         <li><a href="index.html#contact" class="nav-link text-dark text-body-sm no-underline relative">Contact</a></li>
@@ -59,23 +61,23 @@
   <section class="pt-32 pb-12 px-12 max-md:px-5 max-md:pt-24">
     <div class="max-w-5xl">
       <h1 class="font-title font-bold text-[clamp(2.2rem,5vw,3.5rem)] leading-tight text-dark mb-6">ETA: Estimated Time to Achievement</h1>
-      <p class="text-body text-[#333] max-w-2xl mb-8">A Python-based web scraping tool that estimates total study time for WGU Academy courses by analyzing every page — reading time, video durations, interactive activities, quizzes, and embedded resources.</p>
+      <p class="text-body text-[#333] max-w-2xl mb-8">A Python-based web scraping tool that estimates study time for WGU Academy courses by analyzing every page — reading time, video durations, interactive activities, quizzes, and embedded resources.</p>
       <div class="flex flex-wrap gap-8 text-body-sm">
         <div>
           <p class="text-meta text-muted uppercase tracking-wide mb-1">Role</p>
-          <p class="text-dark font-medium">Developer</p>
+          <p class="text-dark font-medium">Instructional Technologist</p>
         </div>
         <div>
           <p class="text-meta text-muted uppercase tracking-wide mb-1">Duration</p>
-          <p class="text-dark font-medium">2026 — ongoing</p>
+          <p class="text-dark font-medium">05/2026</p>
         </div>
         <div>
           <p class="text-meta text-muted uppercase tracking-wide mb-1">Stack</p>
-          <p class="text-dark font-medium">Python, Playwright, yt-dlp</p>
+          <p class="text-dark font-medium">Python, Playwright, Kiro, Github</p>
         </div>
         <div>
           <p class="text-meta text-muted uppercase tracking-wide mb-1">Code</p>
-          <a href="https://github.com/yuezhaowgu/ETA" target="_blank" rel="noopener noreferrer" class="text-dark font-medium underline">GitHub ↗</a>
+          <a href="https://github.com/yuezlearning/ETA" target="_blank" rel="noopener noreferrer" class="text-dark font-medium underline">GitHub ↗</a>
         </div>
       </div>
     </div>
@@ -95,8 +97,8 @@
         <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">01</span>Overview</p>
       </div>
       <div>
-        <p class="text-body leading-relaxed text-[#333] mb-6">WGU Academy courses vary widely in length and complexity, but students have no reliable way to estimate how long a course will actually take. ETA solves this by crawling every page of a course and computing time estimates based on content type.</p>
-        <p class="text-body leading-relaxed text-[#333]">The tool runs headlessly using Playwright, authenticates against WGU Studio, and produces structured JSON summaries that teams can use for scheduling, advising, and content planning.</p>
+        <p class="text-body leading-relaxed text-[#333] mb-6">WGU Academy courses vary widely in length and complexity, but students and advisors have no reliable way to estimate how long a course will actually take. ETA solves this by programmatically scraping every page of a course and computing granular time estimates based on content type — text, video, interactive activities, quizzes, and embedded resources.</p>
+        <p class="text-body leading-relaxed text-[#333]">The tool runs headlessly using Playwright, authenticates against WGU Studio, and produces structured JSON summaries that course teams can use for scheduling, student advising, workload balancing, and content planning. What previously required hours of manual estimation now runs in under 5 minutes.</p>
       </div>
     </div>
   </section>
@@ -105,37 +107,67 @@
   <section class="px-12 py-20 bg-placeholder max-md:px-5 max-md:py-14">
     <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
       <div class="md:sticky md:top-28 md:self-start">
-        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">02</span>Problem</p>
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">02</span>Impact</p>
       </div>
       <div>
-        <p class="text-body leading-relaxed text-[#333] mb-6">Course teams and academic advisors needed accurate time estimates to:</p>
-        <div class="space-y-4">
-          <div class="flex gap-4 items-start">
-            <span class="font-title font-bold text-border text-2xl">01</span>
-            <p class="text-body-sm text-[#333]"><strong class="text-dark">Set student expectations</strong> — learners need to know upfront how many hours a module requires</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+          <div class="text-center p-6 bg-white border border-border rounded-xl">
+            <p class="font-title font-bold text-3xl text-dark mb-2">5 min</p>
+            <p class="text-body-sm text-muted">vs. hours/days manually</p>
           </div>
-          <div class="flex gap-4 items-start">
-            <span class="font-title font-bold text-border text-2xl">02</span>
-            <p class="text-body-sm text-[#333]"><strong class="text-dark">Balance course workload</strong> — identify modules that are disproportionately heavy or light</p>
+          <div class="text-center p-6 bg-white border border-border rounded-xl">
+            <p class="font-title font-bold text-3xl text-dark mb-2">Consistent</p>
+            <p class="text-body-sm text-muted">Estimation per activity type</p>
           </div>
-          <div class="flex gap-4 items-start">
-            <span class="font-title font-bold text-border text-2xl">03</span>
-            <p class="text-body-sm text-[#333]"><strong class="text-dark">Support scheduling</strong> — enable advisors to recommend realistic pacing plans</p>
+          <div class="text-center p-6 bg-white border border-border rounded-xl">
+            <p class="font-title font-bold text-3xl text-dark mb-2">Automated</p>
+            <p class="text-body-sm text-muted">Daily workflow & QA</p>
           </div>
         </div>
-        <p class="text-body leading-relaxed text-[#333] mt-6">Manual estimation was slow, inconsistent, and didn't account for embedded videos, interactive blocks, or external resources.</p>
+        <ul class="space-y-3 text-body-sm text-[#333]">
+          <li>• <strong class="text-dark">Speed:</strong> What takes a human hours or even days of manual page-by-page review, this tool completes in under 5 minutes per course</li>
+          <li>• <strong class="text-dark">Consistency:</strong> Applies uniform estimation rules across every content type, eliminating the variability of subjective human judgment</li>
+          <li>• <strong class="text-dark">Automation:</strong> Integrates into daily workflows and doubles as a QA tool — surfacing broken links, missing videos, and orphaned content along the way</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 03 HOW TIME IS ESTIMATED -->
+  <!-- 03 PROBLEM -->
   <section class="px-12 py-20 max-md:px-5 max-md:py-14">
     <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
       <div class="md:sticky md:top-28 md:self-start">
-        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">03</span>Estimation</p>
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">03</span>Problem</p>
       </div>
       <div>
-        <p class="text-body leading-relaxed text-[#333] mb-8">Each content type has a tailored estimation strategy:</p>
+        <p class="text-body leading-relaxed text-[#333] mb-6">Course teams and academic advisors needed accurate, data-driven time estimates to:</p>
+        <div class="space-y-4">
+          <div class="flex gap-4 items-start">
+            <span class="font-title font-bold text-border text-2xl">01</span>
+            <p class="text-body-sm text-[#333]"><strong class="text-dark">Set student expectations</strong> — learners need to know upfront how many hours a module requires so they can plan their study schedules effectively</p>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="font-title font-bold text-border text-2xl">02</span>
+            <p class="text-body-sm text-[#333]"><strong class="text-dark">Balance course workload</strong> — identify modules that are disproportionately heavy or light, enabling designers to redistribute content for a smoother learner experience</p>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="font-title font-bold text-border text-2xl">03</span>
+            <p class="text-body-sm text-[#333]"><strong class="text-dark">Support scheduling</strong> — enable advisors to recommend realistic completion pacing guides based on actual content volume rather than guesswork</p>
+          </div>
+        </div>
+        <p class="text-body leading-relaxed text-[#333] mt-6">Manual estimation was slow, inconsistent, and couldn't account for embedded videos, interactive blocks, or external resources. Different team members would arrive at different numbers for the same course — making planning unreliable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 ESTIMATION -->
+  <section class="px-12 py-20 bg-placeholder max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">04</span>Estimation</p>
+      </div>
+      <div>
+        <p class="text-body leading-relaxed text-[#333] mb-8">I collaborated with our Learning Experience Designers team to define estimation rules grounded in pedagogical research and real student behavior. Each content type has a tailored strategy:</p>
         <div class="overflow-x-auto">
           <table class="w-full text-body-sm text-left border-collapse">
             <thead>
@@ -184,44 +216,44 @@
     </div>
   </section>
 
-  <!-- 04 ARCHITECTURE -->
-  <section class="px-12 py-20 bg-placeholder max-md:px-5 max-md:py-14">
+  <!-- 05 ARCHITECTURE -->
+  <section class="px-12 py-20 max-md:px-5 max-md:py-14">
     <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
       <div class="md:sticky md:top-28 md:self-start">
-        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">04</span>Architecture</p>
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">05</span>Architecture</p>
       </div>
       <div>
-        <p class="text-body leading-relaxed text-[#333] mb-6">The tool runs a 3-stage pipeline with parallel browser instances:</p>
+        <p class="text-body leading-relaxed text-[#333] mb-6">The tool runs a 3-stage pipeline with parallel browser instances, designed for both speed and reliability:</p>
 
         <div class="space-y-6 mb-10">
           <div class="bg-white rounded-xl p-6 border border-border">
             <h3 class="font-title text-body-sm font-bold text-dark mb-2">Stage 1: Page Scraping</h3>
-            <p class="text-body-sm text-[#333]">Visits every vertical in parallel (5 workers), extracts word counts, videos, interactives, banners, and problem blocks.</p>
+            <p class="text-body-sm text-[#333]">Visits every vertical in parallel (5 workers), extracts word counts, video embeds, interactive blocks, banners, and problem sets. Handles dynamic content loading and JavaScript-rendered elements.</p>
           </div>
           <div class="bg-white rounded-xl p-6 border border-border">
             <h3 class="font-title text-body-sm font-bold text-dark mb-2">Stage 2: YouTube Lookup</h3>
-            <p class="text-body-sm text-[#333]">Resolves durations for embedded YouTube videos via <code class="bg-placeholder px-1.5 py-0.5 rounded text-meta">yt-dlp</code>.</p>
+            <p class="text-body-sm text-[#333]">Resolves actual durations for embedded YouTube videos via <code class="bg-placeholder px-1.5 py-0.5 rounded text-meta">yt-dlp</code>, replacing placeholder estimates with precise runtime data.</p>
           </div>
           <div class="bg-white rounded-xl p-6 border border-border">
             <h3 class="font-title text-body-sm font-bold text-dark mb-2">Stage 3: Vimeo Lookup</h3>
-            <p class="text-body-sm text-[#333]">Resolves durations for embedded Vimeo videos via postMessage handshake.</p>
+            <p class="text-body-sm text-[#333]">Resolves durations for embedded Vimeo videos via postMessage handshake, handling private and unlisted videos that don't expose metadata through standard APIs.</p>
           </div>
         </div>
 
         <h3 class="font-title text-xl font-bold text-dark mb-4">Concurrency Model</h3>
+        <p class="text-body leading-relaxed text-[#333] mb-6">By introducing a concurrency workflow with 5 parallel Playwright browser instances, the time to estimate one full course decreased from over 10 minutes to less than 5 minutes — making it practical to run as part of daily QA routines.</p>
         <div class="rounded-xl overflow-hidden bg-white aspect-[16/9] border border-border">
           <img src="https://via.placeholder.com/1200x675/ffffff/cccccc?text=Concurrency+Diagram" alt="Concurrency diagram" class="w-full h-full object-cover" />
         </div>
-        <p class="text-meta text-muted mt-3">5 parallel Playwright browser instances scrape pages concurrently, then video lookups run sequentially to avoid rate-limiting.</p>
       </div>
     </div>
   </section>
 
-  <!-- 05 OUTPUT -->
+  <!-- 06 OUTPUT -->
   <section class="px-12 py-20 max-md:px-5 max-md:py-14">
     <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
       <div class="md:sticky md:top-28 md:self-start">
-        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">05</span>Output</p>
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">06</span>Output</p>
       </div>
       <div>
         <p class="text-body leading-relaxed text-[#333] mb-8">The tool produces structured JSON for each course:</p>
@@ -247,24 +279,24 @@
     </div>
   </section>
 
-  <!-- 06 REFLECTION -->
+  <!-- 07 REFLECTION -->
   <section class="px-12 py-20 bg-placeholder max-md:px-5 max-md:py-14">
     <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
       <div class="md:sticky md:top-28 md:self-start">
-        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">06</span>Reflection</p>
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">07</span>Reflection</p>
       </div>
       <div class="space-y-6">
         <div>
-          <h3 class="font-title text-body font-bold text-dark mb-2">Automation as a learning design tool</h3>
-          <p class="text-body-sm text-[#333]">What started as a dev utility became a learning design asset. The time data surfaced content balance issues that human review had missed — modules with 3× the expected workload, videos linked but never watched, and interactive blocks that added time without adding value.</p>
+          <h3 class="font-title text-body font-bold text-dark mb-2">Vibe coding with Kiro</h3>
+          <p class="text-body-sm text-[#333]">Built the entire tool using Kiro as my AI coding companion. From initial scaffolding to handling edge cases in DOM parsing, the iterative workflow let me go from concept to a production-ready pipeline in just 2 weeks — a project that would have taken significantly longer with traditional development alone.</p>
         </div>
         <div>
-          <h3 class="font-title text-body font-bold text-dark mb-2">Dealing with fragile scraping targets</h3>
-          <p class="text-body-sm text-[#333]">Open edX pages are heavily JavaScript-rendered with inconsistent DOM structures across courses. Building resilient selectors and graceful fallbacks taught me to design for uncertainty — a mindset that applies equally to UX and engineering.</p>
+          <h3 class="font-title text-body font-bold text-dark mb-2">Educational technology informing design</h3>
+          <p class="text-body-sm text-[#333]">Typically the flow goes from instructional design to technology implementation. This project reversed that relationship — by surfacing precise time data, the tool now informs design decisions. Teams use ETA output to rebalance modules, identify content that's disproportionately heavy, and make evidence-based adjustments to course structure.</p>
         </div>
         <div>
-          <h3 class="font-title text-body font-bold text-dark mb-2">Next steps</h3>
-          <p class="text-body-sm text-[#333]">Exploring a dashboard layer that visualizes time distribution across modules, flags outliers, and integrates with WGU's content planning workflow. Also considering LRPS (Learner-Reported Pacing Scores) to validate estimated vs. actual time.</p>
+          <h3 class="font-title text-body font-bold text-dark mb-2">AI automating everyday workflows</h3>
+          <p class="text-body-sm text-[#333]">This project reinforced a broader lesson: using AI to automate repetitive workflows creates compounding returns. The time saved on estimation is now redirected toward higher-value work — improving content quality, refining learning experiences, and supporting students more effectively.</p>
         </div>
       </div>
     </div>
@@ -290,7 +322,7 @@
       <a href="https://www.linkedin.com/in/yue-zhao-janie/" target="_blank" rel="noopener noreferrer" class="social-icon w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted no-underline transition-colors duration-200 hover:border-dark hover:text-dark" title="LinkedIn" aria-label="LinkedIn profile">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
       </a>
-      <a href="https://github.com/yuezhaodesign" target="_blank" rel="noopener noreferrer" class="social-icon w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted no-underline transition-colors duration-200 hover:border-dark hover:text-dark" title="GitHub" aria-label="GitHub profile">
+      <a href="https://github.com/yuezlearning" target="_blank" rel="noopener noreferrer" class="social-icon w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted no-underline transition-colors duration-200 hover:border-dark hover:text-dark" title="GitHub" aria-label="GitHub profile">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
       </a>
     </div>

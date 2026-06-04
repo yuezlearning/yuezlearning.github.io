@@ -40,14 +40,15 @@
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-12 py-5 bg-white/90 backdrop-blur-md transition-shadow duration-300 max-md:px-5" role="navigation" aria-label="Main navigation">
     <a href="#" class="font-title font-bold text-lg no-underline text-dark">Yue</a>
     <div class="flex items-center gap-6">
-      <button class="nav-mobile-btn hidden p-2 border-none bg-transparent cursor-pointer text-dark" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <i data-lucide="menu" class="w-6 h-6"></i>
-      </button>
       <!-- Theme toggle -->
       <button id="theme-toggle" class="w-9 h-9 rounded-full border border-border flex items-center justify-center text-dark transition-colors duration-200 hover:bg-dark hover:text-white" aria-label="Toggle dark mode">
         <i data-lucide="sun" class="w-[18px] h-[18px]"></i>
       </button>
-      <ul class="nav-links flex gap-8 list-none items-center" id="navLinks">
+      <!-- Hamburger button (mobile only) -->
+      <button class="nav-mobile-btn p-2 border-none bg-transparent cursor-pointer text-dark md:hidden" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+      <ul class="nav-links hidden md:flex gap-8 list-none items-center" id="navLinks">
         <li><a href="#works" class="nav-link text-dark text-body-sm no-underline relative">Works</a></li>
         <li><a href="#skills" class="nav-link text-dark text-body-sm no-underline relative">Skills</a></li>
         <li><a href="#contact" class="nav-link text-dark text-body-sm no-underline relative">Contact</a></li>

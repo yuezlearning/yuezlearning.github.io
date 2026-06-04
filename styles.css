@@ -52,23 +52,24 @@ nav.scrolled {
 
 /* ── Mobile nav ── */
 @media (max-width: 767px) {
-  .nav-mobile-btn {
-    display: block;
-  }
   .nav-links {
-    display: none;
+    display: none !important;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     background: white;
     flex-direction: column;
+    align-items: center;
     padding: 24px;
     gap: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
   .nav-links.open {
-    display: flex;
+    display: flex !important;
+  }
+  [data-theme="dark"] .nav-links {
+    background: #1a1a1a;
   }
 }
 

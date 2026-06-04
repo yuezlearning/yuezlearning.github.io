@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MuseoGo | Yue Zhao</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            title: ['Sora', 'sans-serif'],
+            body: ['Sora', 'sans-serif'],
+          },
+          colors: {
+            dark: '#1a1a1a',
+            muted: '#555555',
+            border: '#e0e0e0',
+            placeholder: '#f5f5f5',
+          },
+          fontSize: {
+            'body': ['1.125rem', { lineHeight: '1.75' }],
+            'body-sm': ['1rem', { lineHeight: '1.7' }],
+            'meta': ['0.875rem', { lineHeight: '1.5' }],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-dark font-body text-body overflow-x-hidden">
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-12 py-5 bg-white/90 backdrop-blur-md transition-shadow duration-300 max-md:px-5" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="font-title font-bold text-lg no-underline text-dark">Yue</a>
+    <div class="flex items-center gap-6">
+      <button class="nav-mobile-btn hidden p-2 border-none bg-transparent cursor-pointer text-dark" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+      <button id="theme-toggle" class="w-9 h-9 rounded-full border border-border flex items-center justify-center text-dark transition-colors duration-200 hover:bg-dark hover:text-white" aria-label="Toggle dark mode">
+        <i data-lucide="sun" class="w-[18px] h-[18px]"></i>
+      </button>
+      <ul class="nav-links flex gap-8 list-none items-center" id="navLinks">
+        <li><a href="index.html#works" class="nav-link text-dark text-body-sm no-underline relative">Works</a></li>
+        <li><a href="index.html#skills" class="nav-link text-dark text-body-sm no-underline relative">Skills</a></li>
+        <li><a href="index.html#contact" class="nav-link text-dark text-body-sm no-underline relative">Contact</a></li>
+        <li><a href="https://drive.google.com/file/d/1gDudYEFGwRhAT17FEft1UmpS8Rh9lZcr/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-block px-5 py-2 bg-dark text-white no-underline rounded-full text-meta font-medium transition-all duration-200 hover:bg-[#333] hover:-translate-y-px">Resume ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PROJECT HERO -->
+  <section class="pt-32 pb-12 px-12 max-md:px-5 max-md:pt-24">
+    <div class="max-w-5xl">
+      <h1 class="font-title font-bold text-[clamp(2.2rem,5vw,3.5rem)] leading-tight text-dark mb-6">MuseoGo: Making Museum Learning Effective and Engaging</h1>
+      <p class="text-body text-[#333] max-w-2xl mb-8">A mobile app facilitating learning for children at museums by integrating human-AI collaboration. Gained 95% user satisfaction and presented at two conferences.</p>
+      <div class="flex flex-wrap gap-8 text-body-sm">
+        <div>
+          <p class="text-meta text-muted uppercase tracking-wide mb-1">Role</p>
+          <p class="text-dark font-medium">Product Designer</p>
+        </div>
+        <div>
+          <p class="text-meta text-muted uppercase tracking-wide mb-1">Duration</p>
+          <p class="text-dark font-medium">3 months</p>
+        </div>
+        <div>
+          <p class="text-meta text-muted uppercase tracking-wide mb-1">Platform</p>
+          <p class="text-dark font-medium">iOS Mobile App</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <section class="px-12 pb-20 max-md:px-5">
+    <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden bg-placeholder">
+      <img src="https://via.placeholder.com/1600x900/f5f5f5/cccccc?text=MuseoGo+Hero" alt="MuseoGo hero" class="w-full h-full object-cover" />
+    </div>
+  </section>
+
+  <!-- 01 OVERVIEW -->
+  <section class="px-12 py-20 max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">01</span>Overview</p>
+      </div>
+      <div>
+        <p class="text-body leading-relaxed text-[#333] mb-8">Museums have great potential for fostering curiosity and learning, but traditional visits often lead to passive experiences and missed opportunities for deeper engagement. MuseoGo addresses these gaps by offering an AI-driven, three-phase support system:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="border border-border rounded-xl p-6">
+            <h3 class="font-title text-body-sm font-bold text-dark mb-2">Before visit</h3>
+            <p class="text-meta text-muted">Personalized itinerary plan</p>
+          </div>
+          <div class="border border-border rounded-xl p-6">
+            <h3 class="font-title text-body-sm font-bold text-dark mb-2">During visit</h3>
+            <p class="text-meta text-muted">Real-time interactive chatbot</p>
+          </div>
+          <div class="border border-border rounded-xl p-6">
+            <h3 class="font-title text-body-sm font-bold text-dark mb-2">After visit</h3>
+            <p class="text-meta text-muted">Exit ticket and review</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
+          <div class="rounded-xl overflow-hidden bg-placeholder aspect-[9/16]">
+            <img src="https://via.placeholder.com/400x700/f5f5f5/cccccc?text=Before+Visit" alt="Before visit" class="w-full h-full object-cover" />
+          </div>
+          <div class="rounded-xl overflow-hidden bg-placeholder aspect-[9/16]">
+            <img src="https://via.placeholder.com/400x700/f5f5f5/cccccc?text=During+Visit" alt="During visit" class="w-full h-full object-cover" />
+          </div>
+          <div class="rounded-xl overflow-hidden bg-placeholder aspect-[9/16]">
+            <img src="https://via.placeholder.com/400x700/f5f5f5/cccccc?text=After+Visit" alt="After visit" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 IMPACT -->
+  <section class="px-12 py-20 bg-placeholder max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">02</span>Impact</p>
+      </div>
+      <div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
+          <div class="text-center p-8 bg-white border border-border rounded-xl">
+            <p class="font-title font-bold text-4xl text-dark mb-2">95%</p>
+            <p class="text-body-sm text-muted">User satisfaction</p>
+          </div>
+          <div class="text-center p-8 bg-white border border-border rounded-xl">
+            <p class="font-title font-bold text-4xl text-dark mb-2">26%</p>
+            <p class="text-body-sm text-muted">Increase in task completion</p>
+          </div>
+          <div class="text-center p-8 bg-white border border-border rounded-xl">
+            <p class="font-title font-bold text-4xl text-dark mb-2">2</p>
+            <p class="text-body-sm text-muted">Conference presentations</p>
+          </div>
+        </div>
+
+        <h3 class="font-title text-xl font-bold text-dark mb-4">Qualitative Wins</h3>
+        <div class="space-y-4 mb-10">
+          <blockquote class="border-l-2 border-dark pl-6 text-body-sm text-[#333] italic">"Encouraging multifaceted learning which is really beneficial to students!"</blockquote>
+          <blockquote class="border-l-2 border-dark pl-6 text-body-sm text-[#333] italic">"Kids sharing what they've learned and what interests them — and connecting with like-minded peers."</blockquote>
+        </div>
+
+        <h3 class="font-title text-xl font-bold text-dark mb-4">Industry Recognition</h3>
+        <ul class="space-y-2 text-body-sm text-[#333]">
+          <li>• Featured at ASU+GSV Summit AI Show 2025</li>
+          <li>• Finalist at HCII Student Design Competition 2025</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 IDENTIFY THE PROBLEM -->
+  <section class="px-12 py-20 max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">03</span>Problem</p>
+      </div>
+      <div>
+        <p class="text-body leading-relaxed text-[#333] mb-4">Picture this: A family enters a world-class museum. Within 30 minutes, the kids are bored, parents are frustrated, and everyone's ready to leave. Sound familiar?</p>
+        <p class="text-body leading-relaxed text-[#333] mb-4">Despite museums investing $2 billion annually in educational resources, the average engagement rate hovers at just 46%. We discovered a startling disconnect: while museums offer incredible learning opportunities, families struggle to access and utilize them effectively.</p>
+        <p class="text-body leading-relaxed text-[#333] font-medium">This led us to ask: Why is engagement so low, and how might we make museum visits more interactive and effective for children?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 USER RESEARCH -->
+  <section class="px-12 py-20 bg-placeholder max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">04</span>Research</p>
+      </div>
+      <div>
+        <p class="text-body leading-relaxed text-[#333] mb-10">Through interviews with 6 families and 2 museum educators, we uncovered three critical moments where learning breaks down:</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+          <div class="bg-white rounded-xl p-6 border border-border">
+            <p class="text-meta text-muted uppercase tracking-wide mb-3">Parent</p>
+            <p class="text-body-sm text-[#333] italic">"Managing my kids in a large museum can be stressful. I wish there were tools that keep them excited and learning on their own."</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 border border-border">
+            <p class="text-meta text-muted uppercase tracking-wide mb-3">Children</p>
+            <p class="text-body-sm text-[#333] italic">"I don't know where to start. Sometimes I don't understand what the exhibit is about. After a while, I became bored."</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 border border-border">
+            <p class="text-meta text-muted uppercase tracking-wide mb-3">Museum Educator</p>
+            <p class="text-body-sm text-[#333] italic">"The most difficult part is keeping children's attention. They forget most of what they learned after leaving."</p>
+          </div>
+        </div>
+
+        <h3 class="font-title text-xl font-bold text-dark mb-6">Key Pain Points</h3>
+        <div class="space-y-4">
+          <div class="flex gap-4 items-start">
+            <span class="font-title font-bold text-border text-2xl">01</span>
+            <p class="text-body-sm text-[#333]"><strong class="text-dark">Pre-Visit:</strong> Families arrive unprepared, overwhelmed by choices</p>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="font-title font-bold text-border text-2xl">02</span>
+            <p class="text-body-sm text-[#333]"><strong class="text-dark">During Visit:</strong> Children become passive observers, not active learners</p>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="font-title font-bold text-border text-2xl">03</span>
+            <p class="text-body-sm text-[#333]"><strong class="text-dark">After Visit:</strong> The experience ends at the exit — no reflection, no continued exploration</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 IDEATION -->
+  <section class="px-12 py-20 max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">05</span>Ideation</p>
+      </div>
+      <div>
+        <p class="text-body leading-relaxed text-[#333] mb-6">Our proposed solution was to create a personal museum guide for children — a tool that supports them before, during, and after their visit, keeping curiosity alive at every stage.</p>
+        <p class="text-body leading-relaxed text-[#333] mb-10">Core features include personalized itineraries, preview podcasts, real-time Q&A with quizzes, exit tickets, AI-generated review songs, and curated follow-up resources.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="rounded-xl overflow-hidden bg-placeholder aspect-[4/3]">
+            <img src="https://via.placeholder.com/800x600/f5f5f5/cccccc?text=Information+Architecture" alt="Information architecture" class="w-full h-full object-cover" />
+          </div>
+          <div class="rounded-xl overflow-hidden bg-placeholder aspect-[4/3]">
+            <img src="https://via.placeholder.com/800x600/f5f5f5/cccccc?text=AI+Character+Museo" alt="AI Character Museo" class="w-full h-full object-cover" />
+          </div>
+        </div>
+        <p class="text-meta text-muted mt-4">We shifted from an iPad prototype to a mobile-first design. At the center is Museo, a playful character designed to guide children through their journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 DESIGN PROCESS -->
+  <section class="px-12 py-20 bg-placeholder max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">06</span>Design</p>
+      </div>
+      <div>
+        <h3 class="font-title text-xl font-bold text-dark mb-4">Design System</h3>
+        <p class="text-body leading-relaxed text-[#333] mb-6">I built the design system from the ground up. Bright orange as the primary color conveys energy and excitement, paired with Poppins — a rounded sans-serif that feels playful and approachable for children.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+          <div class="rounded-xl overflow-hidden bg-white aspect-[4/3]">
+            <img src="https://via.placeholder.com/800x600/ffffff/cccccc?text=Typography+%26+Color" alt="Typography and color" class="w-full h-full object-cover" />
+          </div>
+          <div class="rounded-xl overflow-hidden bg-white aspect-[4/3]">
+            <img src="https://via.placeholder.com/800x600/ffffff/cccccc?text=Component+Library" alt="Component library" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <h3 class="font-title text-xl font-bold text-dark mb-6">Design Decisions</h3>
+        <p class="text-body leading-relaxed text-[#333] mb-8">We conducted two rounds of usability testing, iteratively refining prototypes to improve clarity, engagement, and overall usability.</p>
+
+        <div class="mb-10">
+          <h4 class="font-title text-body font-bold text-dark mb-3">1. Form Design</h4>
+          <p class="text-body-sm text-[#333] mb-4">Streamlined into step-by-step sections to reduce cognitive load, with progress indicators, optional questions, and a final review page.</p>
+          <div class="rounded-xl overflow-hidden bg-white aspect-[16/9]">
+            <img src="https://via.placeholder.com/1200x675/ffffff/cccccc?text=Form+Design" alt="Form design" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <div class="mb-10">
+          <h4 class="font-title text-body font-bold text-dark mb-3">2. AI-generated Itinerary</h4>
+          <p class="text-body-sm text-[#333] mb-4">Three iterations: V1 text-heavy; V2 simplified with steps; V3 added navigation icons, time estimates, and directions.</p>
+          <div class="rounded-xl overflow-hidden bg-white aspect-[16/9]">
+            <img src="https://via.placeholder.com/1200x675/ffffff/cccccc?text=Itinerary+Iterations" alt="Itinerary iterations" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <div class="mb-10">
+          <h4 class="font-title text-body font-bold text-dark mb-3">3. Accessibility</h4>
+          <p class="text-body-sm text-[#333] mb-4">Alternative AI guide options for young children, age-appropriate tone, and multilingual support.</p>
+          <div class="rounded-xl overflow-hidden bg-white aspect-[16/9]">
+            <img src="https://via.placeholder.com/1200x675/ffffff/cccccc?text=Accessibility+Options" alt="Accessibility options" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-title text-body font-bold text-dark mb-3">4. Minimalist Exit Ticket</h4>
+          <p class="text-body-sm text-[#333] mb-4">Transformed from a physical format into a digitally friendly timeline — clean and visually clear for reflection.</p>
+          <div class="rounded-xl overflow-hidden bg-white aspect-[16/9]">
+            <img src="https://via.placeholder.com/1200x675/ffffff/cccccc?text=Exit+Ticket+Redesign" alt="Exit ticket redesign" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 FINAL SOLUTIONS -->
+  <section class="px-12 py-20 max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">07</span>Solutions</p>
+      </div>
+      <div>
+        <p class="text-body leading-relaxed text-[#333] mb-10">We reimagined the entire museum journey through the lens of a child's curiosity:</p>
+
+        <div class="mb-12">
+          <h3 class="font-title text-xl font-bold text-dark mb-4">Pre-Visit: Building Excitement</h3>
+          <ul class="space-y-2 text-body-sm text-[#333] mb-6">
+            <li>• <strong>AI-Powered Planning:</strong> Families answer fun questions about interests and learning styles</li>
+            <li>• <strong>Personalized Itinerary:</strong> AI creates a custom adventure path</li>
+            <li>• <strong>Preview Podcast:</strong> Kids listen to an engaging story about what they'll discover</li>
+          </ul>
+          <div class="rounded-xl overflow-hidden bg-placeholder aspect-[16/9]">
+            <img src="https://via.placeholder.com/1200x675/f5f5f5/cccccc?text=Pre-Visit+Features" alt="Pre-visit features" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="font-title text-xl font-bold text-dark mb-4">During Visit: Active Exploration</h3>
+          <ul class="space-y-2 text-body-sm text-[#333] mb-6">
+            <li>• <strong>AI Knowledge Buddy:</strong> Age-appropriate answers to any question</li>
+            <li>• <strong>Interactive Challenges:</strong> Location-based quizzes and family activities</li>
+            <li>• <strong>Voice Input:</strong> Speak naturally, removing reading barriers</li>
+          </ul>
+          <div class="rounded-xl overflow-hidden bg-placeholder aspect-[16/9]">
+            <img src="https://via.placeholder.com/1200x675/f5f5f5/cccccc?text=During+Visit+Features" alt="During visit features" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-title text-xl font-bold text-dark mb-4">After Visit: Extending the Journey</h3>
+          <ul class="space-y-2 text-body-sm text-[#333] mb-6">
+            <li>• <strong>Digital Exit Ticket:</strong> A personalized recap of their adventure</li>
+            <li>• <strong>AI-Generated Song:</strong> Learnings transformed into a catchy tune</li>
+            <li>• <strong>Curated Resources:</strong> Follow-up activities based on interest</li>
+          </ul>
+          <div class="rounded-xl overflow-hidden bg-placeholder aspect-[16/9]">
+            <img src="https://via.placeholder.com/1200x675/f5f5f5/cccccc?text=After+Visit+Features" alt="After visit features" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 REFLECTION -->
+  <section class="px-12 py-20 bg-placeholder max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">08</span>Reflection</p>
+      </div>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-title text-body font-bold text-dark mb-2">Designing AI with humanity</h3>
+          <p class="text-body-sm text-[#333]">To make the experience feel more like a friendship than a chatbot, we gave Museo a warm personality: greeting children at the start, accompanying them throughout, and even "writing" a personalized song as a gift.</p>
+        </div>
+        <div>
+          <h3 class="font-title text-body font-bold text-dark mb-2">Defining the right audience</h3>
+          <p class="text-body-sm text-[#333]">Initially aimed at parents, research revealed they see museums as playtime. We pivoted to focus on children as primary users, giving them a learning companion in Museo.</p>
+        </div>
+        <div>
+          <h3 class="font-title text-body font-bold text-dark mb-2">Growing technical skills</h3>
+          <p class="text-body-sm text-[#333]">I learned AI prompt engineering and explored generative AI, which informed realistic design decisions and strengthened collaboration with engineers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <section class="px-12 py-20 max-md:px-5 max-md:py-14">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+      <div>
+        <p class="text-meta text-muted uppercase tracking-widest font-medium mb-2">Next project</p>
+        <a href="certificate.html" class="font-title font-bold text-2xl text-dark no-underline hover:underline">GenAI Skills Certificate →</a>
+      </div>
+      <a href="index.html#works" class="text-body-sm text-muted no-underline hover:text-dark transition-colors duration-200">← Back to all works</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="px-12 py-12 border-t border-border text-center max-md:px-5">
+    <div class="flex justify-center gap-4 mb-8">
+      <a href="mailto:janie.zhaoy@gmail.com" class="social-icon w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted no-underline transition-colors duration-200 hover:border-dark hover:text-dark" title="Email" aria-label="Send email">
+        <i data-lucide="mail" class="w-5 h-5"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/yue-zhao-janie/" target="_blank" rel="noopener noreferrer" class="social-icon w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted no-underline transition-colors duration-200 hover:border-dark hover:text-dark" title="LinkedIn" aria-label="LinkedIn profile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://github.com/yuezhaodesign" target="_blank" rel="noopener noreferrer" class="social-icon w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted no-underline transition-colors duration-200 hover:border-dark hover:text-dark" title="GitHub" aria-label="GitHub profile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+    </div>
+    <div class="flex justify-center gap-8 flex-wrap">
+      <a href="index.html#works" class="text-muted no-underline text-body-sm transition-colors duration-200 hover:text-dark">Works</a>
+      <a href="index.html#skills" class="text-muted no-underline text-body-sm transition-colors duration-200 hover:text-dark">Skills</a>
+      <a href="mailto:janie.zhaoy@gmail.com" class="text-muted no-underline text-body-sm transition-colors duration-200 hover:text-dark">Contact</a>
+      <a href="https://drive.google.com/file/d/1gDudYEFGwRhAT17FEft1UmpS8Rh9lZcr/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-muted no-underline text-body-sm transition-colors duration-200 hover:text-dark">Resume</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

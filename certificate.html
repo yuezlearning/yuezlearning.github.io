@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GenAI Skills Certificate | Yue Zhao</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            title: ['Sora', 'sans-serif'],
+            body: ['Sora', 'sans-serif'],
+          },
+          colors: {
+            dark: '#1a1a1a',
+            muted: '#555555',
+            border: '#e0e0e0',
+            placeholder: '#f5f5f5',
+          },
+          fontSize: {
+            'body': ['1.125rem', { lineHeight: '1.75' }],
+            'body-sm': ['1rem', { lineHeight: '1.7' }],
+            'meta': ['0.875rem', { lineHeight: '1.5' }],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-dark font-body text-body overflow-x-hidden">
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-12 py-5 bg-white/90 backdrop-blur-md transition-shadow duration-300 max-md:px-5" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="font-title font-bold text-lg no-underline text-dark">Yue</a>
+    <div class="flex items-center gap-6">
+      <button class="nav-mobile-btn hidden p-2 border-none bg-transparent cursor-pointer text-dark" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+      <button id="theme-toggle" class="w-9 h-9 rounded-full border border-border flex items-center justify-center text-dark transition-colors duration-200 hover:bg-dark hover:text-white" aria-label="Toggle dark mode">
+        <i data-lucide="sun" class="w-[18px] h-[18px]"></i>
+      </button>
+      <ul class="nav-links flex gap-8 list-none items-center" id="navLinks">
+        <li><a href="index.html#works" class="nav-link text-dark text-body-sm no-underline relative">Works</a></li>
+        <li><a href="index.html#skills" class="nav-link text-dark text-body-sm no-underline relative">Skills</a></li>
+        <li><a href="index.html#contact" class="nav-link text-dark text-body-sm no-underline relative">Contact</a></li>
+        <li><a href="https://drive.google.com/file/d/1gDudYEFGwRhAT17FEft1UmpS8Rh9lZcr/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-block px-5 py-2 bg-dark text-white no-underline rounded-full text-meta font-medium transition-all duration-200 hover:bg-[#333] hover:-translate-y-px">Resume ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PROJECT HERO -->
+  <section class="pt-32 pb-12 px-12 max-md:px-5 max-md:pt-24">
+    <div class="max-w-5xl">
+      <h1 class="font-title font-bold text-[clamp(2.2rem,5vw,3.5rem)] leading-tight text-dark mb-6">Generative AI Skills Certificate</h1>
+      <p class="text-body text-[#333] max-w-2xl mb-8">A multi-course certificate built in Open edX with custom reusable components — interactive prompt sandboxes, scenario branchers, and rubric scorers — that ship across the catalog and save 7 Taps subscriptions.</p>
+      <div class="flex flex-wrap gap-8 text-body-sm">
+        <div>
+          <p class="text-meta text-muted uppercase tracking-wide mb-1">Role</p>
+          <p class="text-dark font-medium">Learning Engineer</p>
+        </div>
+        <div>
+          <p class="text-meta text-muted uppercase tracking-wide mb-1">Duration</p>
+          <p class="text-dark font-medium">2025 — ongoing</p>
+        </div>
+        <div>
+          <p class="text-meta text-muted uppercase tracking-wide mb-1">Organization</p>
+          <p class="text-dark font-medium">WGU Academy</p>
+        </div>
+        <div>
+          <p class="text-meta text-muted uppercase tracking-wide mb-1">Stack</p>
+          <p class="text-dark font-medium">Open edX, LTI, H5P, JS, CodeSignal</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <section class="px-12 pb-20 max-md:px-5">
+    <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden bg-placeholder">
+      <img src="https://via.placeholder.com/1600x900/f5f5f5/cccccc?text=Certificate+Hero" alt="Generative AI Skills Certificate" class="w-full h-full object-cover" />
+    </div>
+  </section>
+
+  <!-- 01 OVERVIEW -->
+  <section class="px-12 py-20 max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">01</span>Overview</p>
+      </div>
+      <div>
+        <p class="text-body leading-relaxed text-[#333] mb-6">WGU Academy launched a Generative AI Skills Certificate to equip learners with practical AI literacy — from prompt engineering fundamentals to responsible AI use in professional contexts.</p>
+        <p class="text-body leading-relaxed text-[#333] mb-6">As the Learning Engineer, I was responsible for building the entire course infrastructure in Open edX: authoring interactive content, creating reusable custom components, integrating third-party tools via LTI, and ensuring a consistent, engaging learner experience across all modules.</p>
+        <p class="text-body leading-relaxed text-[#333]">The certificate has shipped to 12,000+ enrolled learners and serves as the template for future WGU Academy programs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 IMPACT -->
+  <section class="px-12 py-20 bg-placeholder max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">02</span>Impact</p>
+      </div>
+      <div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+          <div class="text-center p-6 bg-white border border-border rounded-xl">
+            <p class="font-title font-bold text-3xl text-dark mb-2">12K+</p>
+            <p class="text-body-sm text-muted">Enrolled learners</p>
+          </div>
+          <div class="text-center p-6 bg-white border border-border rounded-xl">
+            <p class="font-title font-bold text-3xl text-dark mb-2">$$$</p>
+            <p class="text-body-sm text-muted">Saved on 7 Taps subscriptions</p>
+          </div>
+          <div class="text-center p-6 bg-white border border-border rounded-xl">
+            <p class="font-title font-bold text-3xl text-dark mb-2">Reusable</p>
+            <p class="text-body-sm text-muted">Components across catalog</p>
+          </div>
+        </div>
+        <ul class="space-y-3 text-body-sm text-[#333]">
+          <li>• <strong class="text-dark">Cost reduction:</strong> Custom-built components eliminated the need for 7 Taps third-party subscriptions</li>
+          <li>• <strong class="text-dark">Scalability:</strong> Reusable component library now used across multiple courses in the catalog</li>
+          <li>• <strong class="text-dark">Student experience:</strong> Interactive, hands-on activities replaced static reading — improving engagement and completion rates</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 COLLABORATION -->
+  <section class="px-12 py-20 max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">03</span>Collaboration</p>
+      </div>
+      <div>
+        <p class="text-body leading-relaxed text-[#333] mb-8">Building an online certificate requires tight cross-functional coordination. I worked daily with four key roles:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+          <div class="border border-border rounded-xl p-6">
+            <h3 class="font-title text-body-sm font-bold text-dark mb-2">Learning Experience Designer</h3>
+            <p class="text-meta text-muted">Translated pedagogical goals into course structure, learning objectives, and assessment alignment. I worked with them to ensure the technical build matched the instructional intent.</p>
+          </div>
+          <div class="border border-border rounded-xl p-6">
+            <h3 class="font-title text-body-sm font-bold text-dark mb-2">Multimedia Designer</h3>
+            <p class="text-meta text-muted">Created video content, graphics, and visual assets. I integrated these into Open edX with proper responsive containers and accessible alternatives.</p>
+          </div>
+          <div class="border border-border rounded-xl p-6">
+            <h3 class="font-title text-body-sm font-bold text-dark mb-2">Assessment Developer</h3>
+            <p class="text-meta text-muted">Designed formative and summative assessments. I built the technical layer — rubric scorers, quiz integrations, and CodeSignal LTI connections for coding assessments.</p>
+          </div>
+          <div class="border border-border rounded-xl p-6">
+            <h3 class="font-title text-body-sm font-bold text-dark mb-2">Program Manager</h3>
+            <p class="text-meta text-muted">Coordinated timelines, stakeholder reviews, and launch sequencing. I provided build estimates and flagged technical blockers early.</p>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden bg-placeholder aspect-[16/9]">
+          <img src="https://via.placeholder.com/1200x675/f5f5f5/cccccc?text=Team+Workflow+Diagram" alt="Team workflow" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 REUSABLE COMPONENTS -->
+  <section class="px-12 py-20 bg-placeholder max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">04</span>Components</p>
+      </div>
+      <div>
+        <p class="text-body leading-relaxed text-[#333] mb-6">A key contribution was building custom, reusable components that replaced expensive third-party tools (7 Taps) while providing a better student experience. These components are now shared across the entire WGU Academy catalog.</p>
+
+        <div class="mb-10">
+          <h3 class="font-title text-xl font-bold text-dark mb-4">Interactive Prompt Sandbox</h3>
+          <p class="text-body-sm text-[#333] mb-4">Students practice writing and iterating on AI prompts in a safe environment. The sandbox provides real-time feedback, example comparisons, and scoring criteria — all without needing a live AI API call.</p>
+          <div class="rounded-xl overflow-hidden bg-white aspect-[16/9] border border-border">
+            <img src="https://via.placeholder.com/1200x675/ffffff/cccccc?text=Prompt+Sandbox" alt="Prompt sandbox component" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <div class="mb-10">
+          <h3 class="font-title text-xl font-bold text-dark mb-4">Scenario Brancher</h3>
+          <p class="text-body-sm text-[#333] mb-4">Choose-your-own-adventure style decision trees that simulate real-world AI use cases. Students see consequences of their choices, building critical thinking about when and how to use AI tools.</p>
+          <div class="rounded-xl overflow-hidden bg-white aspect-[16/9] border border-border">
+            <img src="https://via.placeholder.com/1200x675/ffffff/cccccc?text=Scenario+Brancher" alt="Scenario brancher component" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <div class="mb-10">
+          <h3 class="font-title text-xl font-bold text-dark mb-4">Rubric Scorer</h3>
+          <p class="text-body-sm text-[#333] mb-4">Self-assessment tool where students evaluate AI-generated outputs against a provided rubric. Builds metacognitive skills and helps them internalize quality criteria for AI outputs.</p>
+          <div class="rounded-xl overflow-hidden bg-white aspect-[16/9] border border-border">
+            <img src="https://via.placeholder.com/1200x675/ffffff/cccccc?text=Rubric+Scorer" alt="Rubric scorer component" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <h3 class="font-title text-xl font-bold text-dark mb-4">Why Custom Over 7 Taps?</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl p-6 border border-border">
+            <h4 class="font-title text-body-sm font-bold text-dark mb-2">Before (7 Taps)</h4>
+            <ul class="text-meta text-muted space-y-1">
+              <li>• Per-seat subscription cost</li>
+              <li>• Limited customization</li>
+              <li>• External redirects break flow</li>
+              <li>• No grade passback to LMS</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-xl p-6 border border-border">
+            <h4 class="font-title text-body-sm font-bold text-dark mb-2">After (Custom Components)</h4>
+            <ul class="text-meta text-muted space-y-1">
+              <li>• Zero per-seat cost</li>
+              <li>• Fully branded & customizable</li>
+              <li>• Inline within course flow</li>
+              <li>• Native grade passback via xBlock</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 CODESIGNAL LTI -->
+  <section class="px-12 py-20 max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">05</span>CodeSignal</p>
+      </div>
+      <div>
+        <p class="text-body leading-relaxed text-[#333] mb-6">For the hands-on coding assessments, I configured CodeSignal integration via LTI (Learning Tools Interoperability) to provide students with real IDE-based challenges directly within the course.</p>
+
+        <h3 class="font-title text-body-sm font-bold text-dark mb-4">Integration Details</h3>
+        <div class="space-y-4 mb-8">
+          <div class="flex gap-4 items-start">
+            <span class="font-title font-bold text-border text-2xl">01</span>
+            <div>
+              <h4 class="font-title text-body-sm font-bold text-dark mb-1">LTI 1.3 Configuration</h4>
+              <p class="text-body-sm text-[#333]">Set up secure OAuth2 handshake between Open edX and CodeSignal, enabling seamless single-sign-on and grade passback.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="font-title font-bold text-border text-2xl">02</span>
+            <div>
+              <h4 class="font-title text-body-sm font-bold text-dark mb-1">Assessment Mapping</h4>
+              <p class="text-body-sm text-[#333]">Mapped each course module to specific CodeSignal challenges, ensuring progressive difficulty and alignment with learning objectives.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="font-title font-bold text-border text-2xl">03</span>
+            <div>
+              <h4 class="font-title text-body-sm font-bold text-dark mb-1">Grade Passback</h4>
+              <p class="text-body-sm text-[#333]">Configured automatic score reporting back to the Open edX gradebook so students see their progress in one place.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl overflow-hidden bg-placeholder aspect-[16/9]">
+          <img src="https://via.placeholder.com/1200x675/f5f5f5/cccccc?text=CodeSignal+LTI+Flow" alt="CodeSignal LTI integration flow" class="w-full h-full object-cover" />
+        </div>
+        <p class="text-meta text-muted mt-3">Students launch CodeSignal challenges inline, complete them in a real IDE, and scores sync automatically to their course progress.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 STUDENT EXPERIENCE -->
+  <section class="px-12 py-20 bg-placeholder max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">06</span>Experience</p>
+      </div>
+      <div>
+        <p class="text-body leading-relaxed text-[#333] mb-8">Every technical decision was made with the student experience in mind. Key improvements over the previous course-build approach:</p>
+        <div class="space-y-6">
+          <div>
+            <h3 class="font-title text-body font-bold text-dark mb-2">Inline interactivity</h3>
+            <p class="text-body-sm text-[#333]">No more redirecting to external tools. Students stay in the learning flow — prompt sandboxes, scenario branchers, and coding challenges all load within the page.</p>
+          </div>
+          <div>
+            <h3 class="font-title text-body font-bold text-dark mb-2">Consistent design language</h3>
+            <p class="text-body-sm text-[#333]">Reusable components share the same interaction patterns, visual style, and feedback mechanisms. Students learn the interface once and transfer that knowledge across modules.</p>
+          </div>
+          <div>
+            <h3 class="font-title text-body font-bold text-dark mb-2">Immediate feedback</h3>
+            <p class="text-body-sm text-[#333]">Components provide in-context responses — hints on prompt quality, consequences of scenario choices, rubric scoring breakdowns — without waiting for instructor grading.</p>
+          </div>
+          <div>
+            <h3 class="font-title text-body font-bold text-dark mb-2">Accessible by default</h3>
+            <p class="text-body-sm text-[#333]">All custom components built with keyboard navigation, screen reader support, and WCAG AA color contrast. No student is excluded from the interactive experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 REFLECTION -->
+  <section class="px-12 py-20 max-md:px-5 max-md:py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-md:gap-6">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="text-body-sm text-muted uppercase tracking-widest font-medium"><span class="mr-2">07</span>Reflection</p>
+      </div>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-title text-body font-bold text-dark mb-2">Build vs. buy decisions</h3>
+          <p class="text-body-sm text-[#333]">The 7 Taps replacement proved that investing dev time upfront saves exponentially on subscription costs at scale. But the real win was quality control — we own the experience end to end.</p>
+        </div>
+        <div>
+          <h3 class="font-title text-body font-bold text-dark mb-2">Cross-functional fluency matters</h3>
+          <p class="text-body-sm text-[#333]">Speaking the language of instructional designers, multimedia creators, and assessment specialists made me a better engineer. I learned to ask "what's the learning goal?" before "what's the tech solution?"</p>
+        </div>
+        <div>
+          <h3 class="font-title text-body font-bold text-dark mb-2">Components as a product</h3>
+          <p class="text-body-sm text-[#333]">Treating reusable components like an internal product — with documentation, versioning, and stakeholder demos — dramatically increased adoption across the catalog. Other course teams now request them by name.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <section class="px-12 py-20 max-md:px-5 max-md:py-14">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+      <div>
+        <p class="text-meta text-muted uppercase tracking-widest font-medium mb-2">Next project</p>
+        <a href="eta.html" class="font-title font-bold text-2xl text-dark no-underline hover:underline">ETA →</a>
+      </div>
+      <a href="index.html#works" class="text-body-sm text-muted no-underline hover:text-dark transition-colors duration-200">← Back to all works</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="px-12 py-12 border-t border-border text-center max-md:px-5">
+    <div class="flex justify-center gap-4 mb-8">
+      <a href="mailto:janie.zhaoy@gmail.com" class="social-icon w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted no-underline transition-colors duration-200 hover:border-dark hover:text-dark" title="Email" aria-label="Send email">
+        <i data-lucide="mail" class="w-5 h-5"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/yue-zhao-janie/" target="_blank" rel="noopener noreferrer" class="social-icon w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted no-underline transition-colors duration-200 hover:border-dark hover:text-dark" title="LinkedIn" aria-label="LinkedIn profile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://github.com/yuezhaodesign" target="_blank" rel="noopener noreferrer" class="social-icon w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted no-underline transition-colors duration-200 hover:border-dark hover:text-dark" title="GitHub" aria-label="GitHub profile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+    </div>
+    <div class="flex justify-center gap-8 flex-wrap">
+      <a href="index.html#works" class="text-muted no-underline text-body-sm transition-colors duration-200 hover:text-dark">Works</a>
+      <a href="index.html#skills" class="text-muted no-underline text-body-sm transition-colors duration-200 hover:text-dark">Skills</a>
+      <a href="mailto:janie.zhaoy@gmail.com" class="text-muted no-underline text-body-sm transition-colors duration-200 hover:text-dark">Contact</a>
+      <a href="https://drive.google.com/file/d/1gDudYEFGwRhAT17FEft1UmpS8Rh9lZcr/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-muted no-underline text-body-sm transition-colors duration-200 hover:text-dark">Resume</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

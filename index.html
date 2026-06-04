@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yue Zhao | Learning Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            title: ['Sora', 'sans-serif'],
+            body: ['Sora', 'sans-serif'],
+          },
+          colors: {
+            dark: '#1a1a1a',
+            muted: '#555555',
+            border: '#e0e0e0',
+            placeholder: '#f5f5f5',
+          },
+          fontSize: {
+            'body': ['1.125rem', { lineHeight: '1.75' }],
+            'body-sm': ['1rem', { lineHeight: '1.7' }],
+            'meta': ['0.875rem', { lineHeight: '1.5' }],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-dark font-body text-body overflow-x-hidden">
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-12 py-5 bg-white/90 backdrop-blur-md transition-shadow duration-300 max-md:px-5" role="navigation" aria-label="Main navigation">
+    <a href="#" class="font-title font-bold text-lg no-underline text-dark">Yue</a>
+    <div class="flex items-center gap-6">
+      <button class="nav-mobile-btn hidden p-2 border-none bg-transparent cursor-pointer text-dark" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+      <!-- Theme toggle -->
+      <button id="theme-toggle" class="w-9 h-9 rounded-full border border-border flex items-center justify-center text-dark transition-colors duration-200 hover:bg-dark hover:text-white" aria-label="Toggle dark mode">
+        <i data-lucide="sun" class="w-[18px] h-[18px]"></i>
+      </button>
+      <ul class="nav-links flex gap-8 list-none items-center" id="navLinks">
+        <li><a href="#works" class="nav-link text-dark text-body-sm no-underline relative">Works</a></li>
+        <li><a href="#skills" class="nav-link text-dark text-body-sm no-underline relative">Skills</a></li>
+        <li><a href="#contact" class="nav-link text-dark text-body-sm no-underline relative">Contact</a></li>
+        <li><a href="https://drive.google.com/file/d/1gDudYEFGwRhAT17FEft1UmpS8Rh9lZcr/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-block px-5 py-2 bg-dark text-white no-underline rounded-full text-meta font-medium transition-all duration-200 hover:bg-[#333] hover:-translate-y-px">Resume ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero-enter h-screen flex flex-col justify-center px-12 max-md:h-auto max-md:min-h-0 max-md:px-5 max-md:pt-24 max-md:pb-10">
+    <!-- Top: large name -->
+    <div class="mb-12">
+      <h1 class="font-title font-bold text-[clamp(3rem,7vw,5.5rem)] leading-[1.05] text-dark">Yue Zhao</h1>
+    </div>
+    <!-- Bottom: photo left, bio + credentials right -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
+      <div class="w-full aspect-[4/3] overflow-hidden rounded bg-placeholder">
+        <img src="https://via.placeholder.com/800x600/f5f5f5/cccccc?text=Headshot" alt="Yue Zhao" class="w-full h-full object-cover" />
+      </div>
+      <div class="flex flex-col justify-between h-full max-md:mt-4">
+        <p class="font-title text-[20px] leading-[1.7] text-[#333] text-left max-w-xl ml-auto">Yue is a <strong class="font-bold text-dark">Learning Developer</strong> passionate about enhancing <strong class="font-bold text-dark">human–AI collaboration</strong> to <strong class="font-bold text-dark">improve learning experiences</strong> and <strong class="font-bold text-dark">boost everyday efficiency</strong>. She believes that integrating advanced technology with thoughtful instructional design can create equal opportunities, make education more engaging, and pave the way for a brighter future.</p>
+        <div class="text-right mt-10 text-body-sm text-muted leading-relaxed">
+          <div class="flex items-center justify-end gap-3 mb-3">
+            <span>Assoc. Learning System Engineer · WGU Academy</span>
+            <img src="https://via.placeholder.com/80x32/f5f5f5/999999?text=WGU" alt="WGU logo" class="h-6 opacity-60" />
+          </div>
+          <div class="flex items-center justify-end gap-3">
+            <span>M.S. · University of Pennsylvania</span>
+            <img src="https://via.placeholder.com/80x32/f5f5f5/999999?text=Penn" alt="University of Pennsylvania logo" class="h-6 opacity-60" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORKS -->
+  <section id="works" class="px-12 py-24 max-md:px-5 max-md:py-16">
+    <div class="mb-16">
+      <div class="text-body-sm text-muted uppercase tracking-widest font-medium">
+        <span class="mr-3">01</span>Selected Works
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- 01 WGU Academy Certificate -->
+      <a href="certificate.html" class="work-card block no-underline text-dark">
+        <div class="work-image-wrap relative w-full aspect-[4/3] overflow-hidden rounded-xl bg-placeholder">
+          <img src="https://via.placeholder.com/800x600/f5f5f5/cccccc?text=GenAI+Certificate" alt="Generative AI Skills Certificate" class="w-full h-full object-cover rounded-xl" />
+          <div class="work-hover-overlay absolute inset-0 bg-black/65 rounded-xl flex flex-col justify-center items-center p-8 opacity-0 transition-opacity duration-300">
+            <p class="text-white/90 text-body-sm leading-relaxed mb-5 text-center w-full">A certificate built in Open edX, with custom reusable components that ship across the catalog.</p>
+            <span class="work-view-btn inline-flex items-center justify-center px-7 py-2.5 bg-white text-dark rounded-full text-body-sm font-medium transition-colors duration-200">View</span>
+          </div>
+        </div>
+        <div class="pt-4 px-1">
+          <div class="text-meta text-muted uppercase tracking-wide mb-1">2026 · Assoc. Instructional Technologist · WGU Academy</div>
+          <h3 class="font-title text-xl font-bold leading-snug mb-1 text-dark">Generative AI Skills Certificate</h3>
+          <p class="text-body-sm text-muted">Open edX | LTI | HTML/CSS | JavaScript </p>
+        </div>
+      </a>
+
+      <!-- 02 ETA -->
+      <a href="eta.html" class="work-card block no-underline text-dark">
+        <div class="work-image-wrap relative w-full aspect-[4/3] overflow-hidden rounded-xl bg-placeholder">
+          <img src="https://via.placeholder.com/800x600/f5f5f5/cccccc?text=ETA" alt="ETA" class="w-full h-full object-cover rounded-xl" />
+          <div class="work-hover-overlay absolute inset-0 bg-black/65 rounded-xl flex flex-col justify-center items-center p-8 opacity-0 transition-opacity duration-300">
+            <p class="text-white/90 text-body-sm leading-relaxed mb-5 text-center w-full">Something at the seam between AI tutoring and authoring tools. Sketches taped to the wall, prototypes humming. Drop a line if you want a peek.</p>
+            <span class="work-view-btn inline-flex items-center justify-center px-7 py-2.5 bg-white text-dark rounded-full text-body-sm font-medium transition-colors duration-200">View</span>
+          </div>
+        </div>
+        <div class="pt-4 px-1">
+          <div class="text-meta text-muted uppercase tracking-wide mb-1">2026 · Assoc. Instructional Technologist · WGU Academy</div>
+          <h3 class="font-title text-xl font-bold leading-snug mb-1 text-dark">ETA (Estimated Time to Achievement)</h3>
+          <p class="text-body-sm text-muted">Python | Web Scraping | Kiro | Prompt Engineering </p>
+        </div>
+      </a>
+
+      <!-- 03 CraftPad -->
+      <a href="craftpad.html" class="work-card block no-underline text-dark">
+        <div class="work-image-wrap relative w-full aspect-[4/3] overflow-hidden rounded-xl bg-placeholder">
+          <img src="https://via.placeholder.com/800x600/f5f5f5/cccccc?text=CraftPad" alt="CraftPad" class="w-full h-full object-cover rounded-xl" />
+          <div class="work-hover-overlay absolute inset-0 bg-black/65 rounded-xl flex flex-col justify-center items-center p-8 opacity-0 transition-opacity duration-300">
+            <p class="text-white/90 text-body-sm leading-relaxed mb-5 text-center w-full">A generative-AI tool that scaffolds teachers through the full course-design loop: from learning objectives to assessments, with evidence-based critique built in.</p>
+            <span class="work-view-btn inline-flex items-center justify-center px-7 py-2.5 bg-white text-dark rounded-full text-body-sm font-medium transition-colors duration-200">View</span>
+          </div>
+        </div>
+        <div class="pt-4 px-1">
+          <div class="text-meta text-muted uppercase tracking-wide mb-1">2025 · Research Assistant · PennGSE</div>
+          <h3 class="font-title text-xl font-bold leading-snug mb-1 text-dark">CraftPad</h3>
+          <p class="text-body-sm text-muted">GenAI | RAG | Instructional Design | Python</p>
+        </div>
+      </a>
+
+      <!-- 04 MuseoGo -->
+      <a href="museogo.html" class="work-card block no-underline text-dark">
+        <div class="work-image-wrap relative w-full aspect-[4/3] overflow-hidden rounded-xl bg-placeholder">
+          <img src="https://via.placeholder.com/800x600/f5f5f5/cccccc?text=MuseoGo" alt="MuseoGo" class="w-full h-full object-cover rounded-xl" />
+          <div class="work-hover-overlay absolute inset-0 bg-black/65 rounded-xl flex flex-col justify-center items-center p-8 opacity-0 transition-opacity duration-300">
+            <p class="text-white/90 text-body-sm leading-relaxed mb-5 text-center w-full">A mobile learning companion that turns a museum visit into a self-paced quest — micro-lessons, location-aware prompts, and collectibles that make the gallery feel alive.</p>
+            <span class="work-view-btn inline-flex items-center justify-center px-7 py-2.5 bg-white text-dark rounded-full text-body-sm font-medium transition-colors duration-200">View</span>
+          </div>
+        </div>
+        <div class="pt-4 px-1">
+          <div class="text-meta text-muted uppercase tracking-wide mb-1">2023 · UX / UI Designer</div>
+          <h3 class="font-title text-xl font-bold leading-snug mb-1 text-dark">MuseoGo</h3>
+          <p class="text-body-sm text-muted">Museum Learning | Figma | UX Research | Gamification</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- CTA after works -->
+    <div class="mt-16 text-center">
+      <a href="mailto:janie.zhaoy@gmail.com" class="inline-block px-8 py-3.5 border border-dark text-dark no-underline rounded-full text-body-sm font-medium transition-all duration-200 hover:bg-dark hover:text-white">Interested? Let's talk →</a>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="px-12 py-24 max-md:px-5 max-md:py-16">
+    <div class="mb-12">
+      <div class="text-body-sm text-muted uppercase tracking-widest font-medium">
+        <span class="mr-3">02</span>Skills
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="skill-card border border-border rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+        <div class="font-title font-bold text-3xl text-border mb-5">01</div>
+        <h3 class="font-title text-body font-bold mb-3 text-dark">Learning Engineering</h3>
+        <p class="text-body-sm text-muted leading-relaxed">LMS Authoring · Open edX · Articulate · H5P · LTI Configuration</p>
+      </div>
+      <div class="skill-card border border-border rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+        <div class="font-title font-bold text-3xl text-border mb-5">02</div>
+        <h3 class="font-title text-body font-bold mb-3 text-dark">Design</h3>
+        <p class="text-body-sm text-muted leading-relaxed">Figma · UX Research · WCAG · Prototyping · User Testing</p>
+      </div>
+      <div class="skill-card border border-border rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+        <div class="font-title font-bold text-3xl text-border mb-5">03</div>
+        <h3 class="font-title text-body font-bold mb-3 text-dark">Code</h3>
+        <p class="text-body-sm text-muted leading-relaxed">HTML / CSS · JavaScript · Python · Github</p>
+      </div>
+      <div class="skill-card border border-border rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+        <div class="font-title font-bold text-3xl text-border mb-5">04</div>
+        <h3 class="font-title text-body font-bold mb-3 text-dark">AI & Data</h3>
+        <p class="text-body-sm text-muted leading-relaxed">Prompt Engineering · RAG · Power BI · R</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="px-12 py-24 max-md:px-5 max-md:py-16">
+    <div class="mb-12">
+      <div class="text-body-sm text-muted uppercase tracking-widest font-medium">
+        <span class="mr-3">03</span>What People Say
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-[#f7f7f7] rounded-2xl p-10">
+        <div class="font-title font-bold text-5xl text-neutral-300 leading-none mb-5">"</div>
+        <p class="font-title text-xl leading-relaxed text-dark mb-8">Yue is the kind of teammate everyone hopes for—super responsive, reliable, and always delivers great work on time."</p>
+        <div class="flex flex-col gap-1">
+          <strong class="text-body-sm font-bold text-dark">Ruby Ren</strong>
+          <span class="text-meta text-muted">Founder, MuseoGo</span>
+        </div>
+      </div>
+      <div class="bg-[#f7f7f7] rounded-2xl p-10">
+        <div class="font-title font-bold text-5xl text-neutral-300 leading-none mb-5">"</div>
+        <p class="font-title text-xl leading-relaxed text-dark mb-8">Yue thinks deeply, works efficiently, and always offers insights that inspire new ideas. It's been a pleasure collaborating with her!"</p>
+        <div class="flex flex-col gap-1">
+          <strong class="text-body-sm font-bold text-dark">Jiayu Cheng</strong>
+          <span class="text-meta text-muted">PhD, University of Pennsylvania</span>
+        </div>
+      </div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <section id="contact" class="px-12 py-24 pb-16 text-center max-md:px-5">
+    <h2 class="font-title font-bold text-[clamp(2.2rem,4.5vw,3.5rem)] text-dark leading-tight mb-10">Stay connected</h2>
+    <a href="mailto:janie.zhaoy@gmail.com" class="cta-btn inline-block px-9 py-3.5 bg-dark text-white no-underline rounded-full text-body font-medium transition-all duration-200 hover:bg-[#333] hover:-translate-y-px">Get in Touch</a>
+    <div class="flex justify-center gap-4 mt-10">
+      <a href="mailto:janie.zhaoy@gmail.com" class="social-icon w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted no-underline transition-colors duration-200 hover:border-dark hover:text-dark" title="Email" aria-label="Send email">
+        <i data-lucide="mail" class="w-5 h-5"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/yue-zhao-janie/" target="_blank" rel="noopener noreferrer" class="social-icon w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted no-underline transition-colors duration-200 hover:border-dark hover:text-dark" title="LinkedIn" aria-label="LinkedIn profile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://github.com/yuezhaodesign" target="_blank" rel="noopener noreferrer" class="social-icon w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted no-underline transition-colors duration-200 hover:border-dark hover:text-dark" title="GitHub" aria-label="GitHub profile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+    </div>
+    <div class="flex justify-center gap-8 mt-10 pt-10 border-t border-border flex-wrap">
+      <a href="#works" class="text-muted no-underline text-body-sm transition-colors duration-200 hover:text-dark">Works</a>
+      <a href="#skills" class="text-muted no-underline text-body-sm transition-colors duration-200 hover:text-dark">Skills</a>
+      <a href="mailto:janie.zhaoy@gmail.com" class="text-muted no-underline text-body-sm transition-colors duration-200 hover:text-dark">Contact</a>
+      <a href="https://drive.google.com/file/d/1gDudYEFGwRhAT17FEft1UmpS8Rh9lZcr/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-muted no-underline text-body-sm transition-colors duration-200 hover:text-dark">Resume</a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
